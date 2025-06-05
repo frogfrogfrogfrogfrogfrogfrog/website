@@ -1,4 +1,5 @@
 
+
 /**
  * Pose Detection Application
  * Using TensorFlow.js and Teachable Machine
@@ -186,7 +187,7 @@ function drawPose(pose, explode) {
 
 async function playInstructionVideo() {
     const video = document.getElementById('instructionVideo');
-    const videoSrc = video.getAttribute('data-video-src') || 'vid.mp4';
+    const videoSrc = video.getAttribute('data-video-src') || 'video.mp4';
     video.src = videoSrc;
     const videoContainer = video.parentElement;
 
