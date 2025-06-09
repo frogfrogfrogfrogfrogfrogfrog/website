@@ -9,10 +9,7 @@
 // Model URL from Teachable Machine
 //**************************************************
 //* as before, paste your lnk below
-let URL = "https://teachablemachine.withgoogle.com/models/RkloSDbYJ/";
-
-
-
+let URL = "https://teachablemachine.withgoogle.com/models/C4V3nV2sc/";
 
 let model, webcam, ctx, labelContainer, maxPredictions;
 
