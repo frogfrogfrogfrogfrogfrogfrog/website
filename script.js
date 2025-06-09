@@ -1,5 +1,3 @@
-
-
 /**
  * Pose Detection Application
  * Using TensorFlow.js and Teachable Machine
@@ -10,6 +8,9 @@
 //**************************************************
 //* as before, paste your lnk below
 let URL = "https://teachablemachine.withgoogle.com/models/C4V3nV2sc/";
+
+
+
 
 let model, webcam, ctx, labelContainer, maxPredictions;
 
@@ -114,7 +115,7 @@ function checkPose(prediction, video) {
     if (prob > 0.8 && !explosionActive) {
         const poseState = poseStates[`pose${poseNumber}`];
 
-        switch (poseNumber) {
+        switch(poseNumber) {
             case '1':
                 if (time >= 0.9 && time <= 3.0 && !poseState.triggered) {
                     triggerExplosion(poseState);
@@ -184,14 +185,14 @@ function drawPose(pose, explode) {
 
 async function playInstructionVideo() {
     const video = document.getElementById('instructionVideo');
-    const videoSrc = video.getAttribute('data-video-src') || 'video.mp4';
+    const videoSrc = video.getAttribute('data-video-src') || 'vid.mp4';
     video.src = videoSrc;
     const videoContainer = video.parentElement;
 
     video.addEventListener('timeupdate', () => {
         const minutes = Math.floor(video.currentTime / 60);
         const seconds = Math.floor(video.currentTime % 60);
-        document.getElementById('videoTime').textContent =
+        document.getElementById('videoTime').textContent = 
             `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
     });
 
@@ -257,4 +258,3 @@ function stopWebcam() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 }
-
