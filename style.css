@@ -3,7 +3,7 @@ body {
   background: linear-gradient(45deg,rgba(255, 0, 195, 1) 0%, rgba(96, 87, 199, 1) 50%);
 }
 
-* {
+button {
   font-size: 18;
 
   color: pink;
